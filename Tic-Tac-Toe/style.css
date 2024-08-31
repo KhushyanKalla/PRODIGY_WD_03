@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+    background-color:rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(244, 242, 241);
+    font-size: large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    display: flex;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 30px;
+    justify-content: center;
+}
+ul{
+    list-style-type: none;
+}
+.game{
+    display:flex;
+    margin-top:30px;
+    justify-content:center;
+    size: 100px;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(3,10vw) ;
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container div{
+    border: 1px solid black;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #282828;
+    color: #E0E0E0;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+}
+.box{
+    font-family: "Kalam", cursive;
+}
+.box:hover{
+    background-color: rgb(255, 236, 236);
+    font-size: 7vw;
+    color: rgb(178, 183, 211);
+    transition: 0.2s;
+}
+.bd-0{
+    border-top: 0 !important;
+}
+.bd-1{
+    border-bottom: 0 !important;
+}
+.bd-2{
+    border-right: 0 !important;
+}
+.bd-3{
+    border-left: 0 !important;
+}
+/* here Important is used for appose the container div solid border rule*/
+.imgbox img{
+    width: 0;
+    transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#reset {
+    margin-left: 100px;
+    padding: 10px 15px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    background-color: #E0E0E0;
+    color: #1F1F1F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#reset:hover {
+    background-color: #1F1F1F;
+    color: #E0E0E0;
+    font-size: 16px;
+    border-color: #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.gameinfo h2{
+    font-family: "Kalam", cursive;
+}
+.ltext{
+    font-size: 6vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+    font-family: "Kalam", cursive;
+    color: rgb(58, 12, 2);
+    visibility: hidden;
+    transition: visibility 1s ease-out;
+}
+.line {
+    background-color: #FF5722;
+    height: 1px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width: 950px)
+{
+    .container{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .game{ 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .imgbox{
+        justify-content: center;
+        align-items: center;
+        display: flex;   
+    }
+}
+@media screen and (max-width: 950px) {
+    .container {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    .container div {
+        font-size: 4vw;
+    }
+
+    #reset {
+        margin-left: 20px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .ltext {
+        font-size: 5vw;
+    }
+
+    nav {
+        font-size: 22px;
+        padding: 0 5px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(3, 30vw);
+    }
+
+    .container div {
+        font-size: 3vw;
+    }
+
+    #reset {
+        margin-left: 10px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .ltext {
+        font-size: 4vw;
+    }
+
+    nav {
+        font-size: 18px;
+    }
+}
